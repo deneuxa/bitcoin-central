@@ -10,7 +10,9 @@ module BitcoinBank
       :en => "English",
       :de => "Deutsch",
       :it => "Italiano",
-      :fr => "Français"
+      :fr => "Français",
+      :es => "Español",
+      :br => "Portugues"
     }
 
     config.i18n.default_locale = :en
