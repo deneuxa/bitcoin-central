@@ -5,8 +5,8 @@
         :title => I18n::Locales[locale],
         :alt => I18n::Locales[locale]
       ),
-      "?#{[request.query_string.split("&").reject{ |l| l =~ /\locale=[a-zA-Z\-]{2,5}/ }, "locale=#{locale}"].flatten.join("&")}"
-    )
+      url_for(:controller => :application, :action => :change_lang, :return_url => request.fullpath)
+      )
   %>
   <% end %>
 </div>
