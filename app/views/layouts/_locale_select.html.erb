@@ -5,7 +5,7 @@
         :title => I18n::Locales[locale],
         :alt => I18n::Locales[locale]
       ),
-      url_for(:controller => :application, :action => :change_lang, :return_url => request.fullpath)
+      url_for(:host => (Rails.env == "production" ? "#{locale}.bitcoin-central.net" : "#{locale}.app.localhost:3000" ), :controller => :application, :action => :change_lang, :return_url => request.fullpath)
       )
   %>
   <% end %>

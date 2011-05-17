@@ -77,27 +77,7 @@ protected
     return accepted.first[0]
   end
 
-  def set_domain_names
-    if Rails.env == "production"
-      @domain_fr = 'fr.bitcoin-central.net'
-      @domain_es = 'es.bitcoin-central.net'
-      @domain_it = 'it.bitcoin-central.net'
-      @domain_de = 'de.bitcoin-central.net'
-      @domain_br = 'br.bitcoin-central.net'
-      @domain_pt = 'pt.bitcoin-central.net'
-      @domain_uk = 'uk.bitcoin-central.net'
-      @domain_us = 'us.bitcoin-central.net'
-    else
-      @domain_fr = 'fr.app.localhost:3000'
-      @domain_es = 'es.app.localhost:3000'
-      @domain_it = 'it.app.localhost:3000'
-      @domain_de = 'de.app.localhost:3000'
-      @domain_br = 'br.app.localhost:3000'
-      @domain_pt = 'pt.app.localhost:3000'
-      @domain_uk = 'uk.app.localhost:3000'
-      @domain_us = 'us.app.localhost:3000'
-    end
-  end
+  
 
   def change_lang
     if params[:return_url]
